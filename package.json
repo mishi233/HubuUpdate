@@ -8,7 +8,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:hubuUpdate": "node dist/hubu-update/server/server.mjs",
-    "deploy": "ng build --output-path docs && git add . && git commit -m 'Deploy' && git push origin2 main && git push origin `git subtree split --prefix docs main`:gh-pages --force"
+    "deploy": "ng build --output-path docs && git add . && git commit -m 'Deploy' && git push origin2 main && git push origin2 `git subtree split --prefix docs main`:refs/heads/gh-pages --force"
   },
   "private": true,
   "dependencies": {
