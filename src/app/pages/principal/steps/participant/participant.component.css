@@ -1,0 +1,89 @@
+.container {
+    display: flex;
+    gap: 10px;
+    height: 100vh;
+    padding-right: 50px;
+    height: 100%;
+}
+
+.finalize_case {
+    flex: 0 0 25%;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    margin-left: 10px;
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    
+}
+
+.finalize_case .title {
+    font-size: 1.7rem;
+    font-weight: bold;
+    margin: 0 0 20px 10px;
+}
+
+.steps {
+    display: grid;
+    grid-template-columns: auto 1fr; 
+    gap: 10px 20px; 
+    align-items: center; 
+    width: 100%; 
+}
+
+.row {
+    display: contents; 
+}
+
+.row p{
+    font-weight: bold;
+}
+
+.circle {
+    background-color: rgb(0, 59, 0);
+    border-radius: 50%;
+    aspect-ratio: 1 / 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 16px;
+    width: 40px; 
+    box-sizing: border-box;
+}
+
+.text {
+    font-size: 14px;
+    color: rgb(117, 117, 117);
+}
+.text p{
+    font-size: 16px;
+}
+
+.currentText{
+    color: black;
+}
+
+.completed {
+    background-color: rgb(0, 128, 0);
+    border: none;
+}
+
+.current {
+    background-color: rgb(113, 158, 113); 
+    border: 4px solid rgb(0, 128, 0); 
+}
+
+.upcoming {
+    background-color: rgb(200, 200, 200); 
+    border: none;
+}
+
+.information {
+    flex: 0 0 75%;
+    background-color: white;
+    padding: 20px 20px 0 20px;
+    box-sizing: border-box;
+    margin-right: 10px;
+}

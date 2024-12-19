@@ -1,0 +1,121 @@
+.interface-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    text-align: justify;
+}
+
+p{
+    font-size: 14px;
+    font-weight: 500;
+    color: rgb(37, 37, 37);
+}
+
+h1{
+    margin: 30px 0 0 0;
+    line-height: 0;
+}
+
+small{
+    color: rgb(70, 70, 70)
+}
+
+.block {
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.block h2 {
+    margin: 0 0 20px 0 ;
+    font-size: 23px;
+}
+
+.row-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.row-container .box {
+    flex: 1;
+    padding: 25px 15px 25px 15px;
+    background-color: #fff;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.box{
+    display: flex;
+}
+
+
+.box p {
+    flex: 1; 
+    margin: 0;
+    text-align: left; 
+}
+
+.box h4{
+    margin: 0 0 20px 0;
+}
+
+
+.label {
+    flex: 0 0 10%; 
+    font-weight: bold;
+    font-size: 14px;
+    text-align: left; 
+    color: green;
+}
+
+.visitResume{
+    flex: 1;
+    text-align: left; 
+}
+
+.ill-block{
+    flex-direction: column;
+    border: 2.5px solid #ececec;
+    display: flex;
+    padding: 20px;
+}
+
+.ill-block h2{
+    width: 100%;
+}
+
+.columns-container {
+    display: flex;
+    gap: 50px;
+    padding: 0 10px 0 5px;
+    box-sizing: border-box;
+}
+
+.columns-container .column {
+    flex: 1;
+    
+}
+
+.considerations{
+    margin-top: 30px;
+    background-color: rgb(229, 255, 242);
+    color: rgb(0, 116, 56);
+    padding: 20px 15px 10px 15px;
+}
+
+.treatment_explication{
+    background-color: #fff;
+}
+
+.treatment_options{
+    background-color: whitesmoke;
+    padding: 10px 20px 20px 20px;
+    box-sizing: border-box;
+}
+
+ul{
+    padding: 0 15px 0 15px;
+}
+
+

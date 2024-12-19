@@ -1,0 +1,57 @@
+<div class="container">
+    <div class="finalize_case">
+        <p class="title">Finalizar caso</p>
+
+        <div class="steps">
+            <div class="row" (click)="currentStep=1" >
+                <div class="circle" 
+                [ngClass]="{
+                    'completed': 1 < currentStep,
+                    'current': 1 === currentStep,
+                    'upcoming': 1 > currentStep
+                }">
+                    1
+                </div>
+                <div class="text" [ngClass]="{'currentText': 1 === currentStep}"> 
+                    <p>Hablanos del paciente</p>
+                    Hacemos uso de esta información para generar un débido análisis para nuestra predicciones
+                </div>
+            </div>
+            <div class="row" (click)="currentStep=2">
+                <div class="circle"                 
+                [ngClass]="{
+                    'completed': 2 < currentStep,
+                    'current': 2 === currentStep,
+                    'upcoming': 2 > currentStep
+                }">
+                    2
+                </div>
+                <div class="text" [ngClass]="{'currentText': 2 === currentStep}">
+                    <p>Revisión de la información</p>
+                    Haz clic sobre los textos para realizar cambios sobre esta información
+                </div>
+            </div>
+            <div class="row" (click)="currentStep=3">
+                <div class="circle"                 
+                [ngClass]="{
+                    'completed': 3 < currentStep,
+                    'current': 3 === currentStep,
+                    'upcoming': 3 > currentStep
+                }">
+                    3
+                </div>
+                <div class="text" [ngClass]="{'currentText': 3 === currentStep}">
+                    <p>Enviar la información al paciente</p>
+                    Realiza el envío de plan de tratamiento
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="information">
+        <app-patient-information *ngIf="currentStep === 1"></app-patient-information>
+
+        <app-review *ngIf="currentStep === 2"></app-review>
+
+        <app-send-information *ngIf="currentStep === 3"></app-send-information>
+    </div>
+</div>
