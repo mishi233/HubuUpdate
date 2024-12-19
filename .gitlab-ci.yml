@@ -16,12 +16,12 @@ build:
     - npx ng build
   artifacts:
     paths:
-      - dist
+      - dist/hubu-update  # Usamos dist/hubu-update como la ruta de salida del build
 
 pages:
   stage: deploy
   script:
-    - rm -rf public/*/
+    - cp -r dist/hubu-update/* public/  # Copia los archivos generados en dist/hubu-update a public/
   artifacts:
     paths:
       - public
