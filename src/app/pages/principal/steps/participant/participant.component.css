@@ -82,7 +82,7 @@
 .information {
     flex: 0 0 75%;
     background-color: white;
-    padding: 20px 20px 0 20px;
+    padding: 20px 20px 30px 20px;
     box-sizing: border-box;
     margin-right: 10px;
 }

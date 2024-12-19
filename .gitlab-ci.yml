@@ -20,6 +20,8 @@ build:
 
 pages:
   stage: deploy
+  script:
+    - rm -rf public/*/
   artifacts:
     paths:
       - public
