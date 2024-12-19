@@ -40,7 +40,7 @@ export class PrincipalComponent {
 ];
   
 
-  username = "Michael"
+  username = "Cesar"
   totalCases = "16"
 
   displayedColumns: string[] = ['nombre_mascota', 'estado', 'especie' ,'costo', 'fecha_de_creacion', 'tutor', 'numero_telefonico', 'email'];

@@ -29,5 +29,13 @@ export class ReviewComponent {
   ];  
 
   displayedColumns: string[] = ['prioridad', 'procedimiento', 'costo_final'];
-  
+  isAgendarOpen = false
+
+  abrirAgendar(){
+    this.isAgendarOpen = true
+  }
+
+  cerrarAgendar(){
+    this.isAgendarOpen = false
+  }
 }

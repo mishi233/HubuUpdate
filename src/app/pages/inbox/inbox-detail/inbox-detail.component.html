@@ -13,8 +13,8 @@
         <textarea [(ngModel)]="suggestedResponse" rows="5" placeholder="Escribe tu mensaje aquí..."></textarea>
     
     <div class="buttons-container">
-        <button class="cancel-btn">Cancelar</button>
-        <button class="send-btn">Enviar</button>
+        <button (click)="close()" class="cancel-btn">Cancelar</button>
+        <button (click)="close()" class="send-btn">Enviar</button>
     </div>
 
 </div>

@@ -1,0 +1,31 @@
+.container {
+    background-color: whitesmoke;
+    padding: 10px 10px 10px 10px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .content {
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+  
+  .box {
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+  }
+
+  h4{
+    font-weight: light;
+  }
+
+  .box:hover{
+    opacity: 0.7;
+  }
+  

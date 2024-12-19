@@ -1,0 +1,50 @@
+.resume {
+    padding: 5px 5px 10px 20px;
+    background-color: white;
+    flex: 1;
+}
+
+.container {
+    display: flex;
+    background-color: whitesmoke;
+    gap: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+    height: 80%;
+}
+
+.box {
+    padding: 10px;
+    background-color: white;
+    box-sizing: border-box;
+    padding: 15px;
+}
+
+.box-left {
+    flex: 1;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.box-right {
+    flex: 0 0 60%;
+}
+
+p {
+    font-size: 14px;
+}
+
+button {
+    width: 100%;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.send-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+}

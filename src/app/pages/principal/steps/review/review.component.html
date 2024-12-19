@@ -80,40 +80,64 @@
                 <ul>
                     <li>
                         <p><b>Plan Integral de Recuperación Nutricional:</b> El tratamiento se enfoca en establecer una
-                            dieta equilibrada que incluya proteínas y grasas saludables, junto con suplementos vitamínicos 
-                            para reforzar el sistema inmunológico. Se complementa con ejercicios moderados para mejorar la 
-                            masa muscular y un monitoreo constante del peso y la condición corporal, asegurando ajustes 
+                            dieta equilibrada que incluya proteínas y grasas saludables, junto con suplementos
+                            vitamínicos
+                            para reforzar el sistema inmunológico. Se complementa con ejercicios moderados para mejorar
+                            la
+                            masa muscular y un monitoreo constante del peso y la condición corporal, asegurando ajustes
                             periódicos según el progreso del
                             paciente.</p>
                     </li>
                 </ul>
-                
+                <input placeholder="Haga sus consultas aqui" style="width: 100%;">
+                <small style="font-size: x-small;">Estas respuestas pueden demorar alrededor de las 24 horas</small>
             </div>
         </div>
     </div>
 
     <div class="block">
-        <h2>Título del Tercer Bloque</h2>
+        <div class="treatment-header">
+            <h2>Tratamiento presupuestado</h2>
+            <button class="send-btn" (click)="abrirAgendar()">
+                <h3>Agendar tratamiento</h3>
+            </button>
+        </div>
         <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
             <ng-container matColumnDef="prioridad">
-              <th mat-header-cell *matHeaderCellDef> Prioridad </th>
-              <td mat-cell *matCellDef="let element"> {{element.prioridad}} </td>
+                <th mat-header-cell *matHeaderCellDef> Prioridad </th>
+                <td mat-cell *matCellDef="let element"> {{element.prioridad}} </td>
             </ng-container>
-          
+
             <ng-container matColumnDef="procedimiento">
-              <th mat-header-cell *matHeaderCellDef> Procedimiento </th>
-              <td mat-cell *matCellDef="let element"> {{element.procedimiento}} </td>
+                <th mat-header-cell *matHeaderCellDef> Procedimiento </th>
+                <td mat-cell *matCellDef="let element"> {{element.procedimiento}} </td>
             </ng-container>
-          
+
             <ng-container matColumnDef="costo_final">
-              <th mat-header-cell *matHeaderCellDef> Costo Final </th>
-              <td mat-cell *matCellDef="let element"> {{element.costo_final}} </td>
+                <th mat-header-cell *matHeaderCellDef> Costo Final </th>
+                <td mat-cell *matCellDef="let element"> {{element.costo_final}} </td>
             </ng-container>
-          
+
             <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
             <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-          </table>
-          
+        </table>
+
+    </div>
+</div>
+
+
+<div *ngIf="isAgendarOpen" (click)="isAgendarOpen=false" class="overlay"></div>
+<div *ngIf="isAgendarOpen" class="popup">
+    <h2>Selecciona una fecha y un día</h2>
+
+    <div class="form-group">
+        <label for="date">Fecha:</label>
+        <input type="date" id="date" />
+    </div>
+
+    <div>
+        <button (click)="isAgendarOpen=false" class="cancel-btn">Cancelar</button>
+        <button (click)="isAgendarOpen=false" class="send-btn">Enviar</button>
     </div>
 </div>

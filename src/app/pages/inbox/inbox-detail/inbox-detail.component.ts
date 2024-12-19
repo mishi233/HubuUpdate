@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-inbox-detail',
@@ -11,6 +12,8 @@ import { FormsModule } from '@angular/forms';
 })
 export class InboxDetailComponent {
 
+  constructor(private router: Router) {}
+
   medicalSteps = [
     { title: 'Consulta Inicial', description: 'Revisión del paciente para establecer diagnóstico preliminar.', date: new Date(2023, 0, 15) },
     { title: 'Toma de Muestras', description: 'Se toman muestras de sangre y orina para análisis.', date: new Date(2023, 0, 17) },
@@ -19,4 +22,7 @@ export class InboxDetailComponent {
 
   suggestedResponse = 'Le recordamos que debe realizar la agendación de su cita para la vacuna';
 
+  close(){
+    //this.router.navigate(['dashboard/inbox/']);
+  }
 }

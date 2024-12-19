@@ -7,10 +7,11 @@ import { InboxDetailComponent } from './pages/inbox/inbox-detail/inbox-detail.co
 import { InboxComponent } from './pages/inbox/inbox.component';
 
 export const routes: Routes = [
-  { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
+  { path: '', redirectTo: 'principal', pathMatch: 'full' },
   { 
     path: 'dashboard', component: DashboardComponent,
     children: [
+      { path: '', redirectTo: 'principal', pathMatch: 'full' },
       { path: 'principal', component: PrincipalComponent},
       { path: 'participant/:id', component: ParticipantComponent},
       { path: 'inbox', component: InboxComponent,
