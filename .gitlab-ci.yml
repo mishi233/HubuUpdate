@@ -20,9 +20,6 @@ build:
 
 pages:
   stage: deploy
-  script:
-    - rm -rf public/*
-    - mv dist/daxa/browser/* public/
   artifacts:
     paths:
       - public

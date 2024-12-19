@@ -94,5 +94,26 @@
 
     <div class="block">
         <h2>Título del Tercer Bloque</h2>
+        <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+            <ng-container matColumnDef="prioridad">
+              <th mat-header-cell *matHeaderCellDef> Prioridad </th>
+              <td mat-cell *matCellDef="let element"> {{element.prioridad}} </td>
+            </ng-container>
+          
+            <ng-container matColumnDef="procedimiento">
+              <th mat-header-cell *matHeaderCellDef> Procedimiento </th>
+              <td mat-cell *matCellDef="let element"> {{element.procedimiento}} </td>
+            </ng-container>
+          
+            <ng-container matColumnDef="costo_final">
+              <th mat-header-cell *matHeaderCellDef> Costo Final </th>
+              <td mat-cell *matCellDef="let element"> {{element.costo_final}} </td>
+            </ng-container>
+          
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+          </table>
+          
     </div>
 </div>

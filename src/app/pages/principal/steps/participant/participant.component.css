@@ -1,9 +1,8 @@
 .container {
     display: flex;
     gap: 10px;
-    height: 100vh;
     padding-right: 50px;
-    height: 100%;
+    box-sizing: border-box;
 }
 
 .finalize_case {
