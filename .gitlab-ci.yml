@@ -1,31 +1,30 @@
-image: node:18 # Utiliza la imagen de Node.js que se necesita para Angular
-
-stages:
-  - build
-  - deploy
+image: node:20.17.0
 
 cache:
   paths:
     - node_modules/
 
-before_script:
-  - npm install -g @angular/cli # Instala Angular CLI globalmente
+stages:
+  - build
+  - deploy
 
 build:
   stage: build
   script:
-    - npm install # Instala las dependencias del proyecto
-    - ng build --prod # Construye el proyecto en modo producción
+    - rm -rf node_modules package-lock.json
+    - npm install
+    - npx ng build
   artifacts:
     paths:
-      - dist/ # La carpeta que contiene los archivos construidos
+      - dist
 
-deploy:
+pages:
   stage: deploy
   script:
-    - mv dist/tu-proyecto /public # Mueve los archivos construidos a la carpeta pública
+    - rm -rf public/*
+    - mv dist/daxa/browser/* public/
   artifacts:
     paths:
       - public
-  only:
-    - main # Despliega solo cuando haya cambios en la rama principal
+  rules:
+    - if: $CI_COMMIT_REF_NAME == "main"
