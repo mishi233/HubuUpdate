@@ -1,0 +1,46 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: auto;
+    padding: 20px 20px 30px 20px;
+}
+
+.resume {
+    padding: 5px 5px 10px 20px;
+    background-color: white;
+    flex: 1;
+}
+
+.content {
+    padding: 10px 30px 20px 30px;
+    background-color: white;
+    flex: 1;
+
+}
+
+.activo {
+    color: green;
+    font-weight: bold;
+}
+
+.inactivo {
+    color: red;
+    font-weight: bold;
+}
+
+th {
+    font-weight: bold;
+    font-size: medium;
+    color: rgb(65, 65, 65)
+}
+
+.mat-mdc-row:hover{
+    background-color: rgb(241, 241, 241);
+    cursor: pointer;
+}
+
+
+.mat-column-fecha_de_creacion, .mat-column-especie {
+    border-right: 1px solid #ccc; 
+  }

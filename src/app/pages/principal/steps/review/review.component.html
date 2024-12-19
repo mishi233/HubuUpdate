@@ -1,0 +1,119 @@
+<div class="interface-container">
+    <h1>Tratamiento de Max </h1>
+    <small>09/10/2024</small>
+
+    <div class="columns-container">
+        <div class="column">
+            <h2>Resumen de la Visita Inicial</h2>
+            <p>Max presentó un cuadro clínico preocupante debido a un bajo peso y una condición corporal deficiente.
+                Durante la revisión inicial, se detectó un problema significativo de desnutrición. Los datos recopilados
+                incluyeron
+                peso corporal, frecuencia cardíaca, y una inspección visual general de su estado físico, destacando la
+                urgencia
+                de implementar un plan de acción para abordar su salud integral.</p>
+        </div>
+        <div class="column">
+            <h2>Tratamiento Sugerido</h2>
+            <p>Para mejorar la salud de Max, se recomendó un monitoreo periódico acompañado de una dieta específica
+                diseñada
+                para sus necesidades. Este plan busca incrementar su peso de manera progresiva, asegurando un equilibrio
+                entre
+                los nutrientes esenciales y fortaleciendo su sistema inmunológico.</p>
+        </div>
+    </div>
+
+    <div class="block">
+        <h2>Su plan de tratamiento</h2>
+        <div class="row-container">
+            <div class="box">
+                <div class="label">Visita 1</div>
+                <div class="visitResume">
+                    <h4>Revisión General de Salud</h4>
+                    <p>Durante la primera visita, se realizó una evaluación detallada del estado de Max. Esto incluyó la
+                        medición
+                        de peso, temperatura corporal, frecuencia cardíaca y respiratoria, junto con la inspección de
+                        piel, pelaje,
+                        ojos, orejas y encías para detectar posibles infecciones, alergias o anomalías. Adicionalmente,
+                        se revisaron
+                        antecedentes médicos y hábitos alimenticios para determinar ajustes necesarios en su dieta y
+                        plan de cuidados.</p>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="label">Visita 1</div>
+                <div class="visitResume">
+                    <h4>Análisis Detallado de Sangre</h4>
+                    <p>En la segunda visita, se realizaron pruebas de laboratorio para obtener una visión más clara de
+                        la salud
+                        interna de Max. El hemograma completo permitió evaluar niveles de glóbulos rojos, blancos,
+                        plaquetas y hemoglobina,
+                        identificando posibles problemas como anemia o infecciones. También se realizaron análisis
+                        bioquímicos que evaluaron
+                        la función hepática y renal, así como los niveles de glucosa y electrolitos, proporcionando
+                        datos cruciales para ajustar el tratamiento.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="ill-block">
+        <h2>Desnutrición Canina Crónica</h2>
+        <div class="columns-container">
+            <div class="column treatment_explication">
+                <p>La desnutrición canina es una afección grave que afecta la capacidad del cuerpo para mantener sus
+                    funciones vitales debido
+                    a una ingesta insuficiente de nutrientes esenciales. En el caso de Max, su bajo peso y falta de
+                    energía son señales de una
+                    alimentación inadecuada o de problemas subyacentes como enfermedades crónicas.</p>
+                <div class="considerations">
+                    <b>ⓘ Consideraciones a tener en cuenta </b>
+                    <p>Para asegurar el éxito del tratamiento, es crucial seguir estrictamente las indicaciones del
+                        veterinario. Se recomienda
+                        monitorear regularmente el progreso de Max, asegurando que su dieta sea balanceada y adaptada a
+                        sus
+                        necesidades específicas.</p>
+                </div>
+            </div>
+            <div class="column treatment_options">
+                <h3>Opciones de tratamiento discutido</h3>
+                <ul>
+                    <li>
+                        <p><b>Plan Integral de Recuperación Nutricional:</b> El tratamiento se enfoca en establecer una
+                            dieta equilibrada que incluya proteínas y grasas saludables, junto con suplementos vitamínicos 
+                            para reforzar el sistema inmunológico. Se complementa con ejercicios moderados para mejorar la 
+                            masa muscular y un monitoreo constante del peso y la condición corporal, asegurando ajustes 
+                            periódicos según el progreso del
+                            paciente.</p>
+                    </li>
+                </ul>
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="block">
+        <h2>Título del Tercer Bloque</h2>
+        <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+            <ng-container matColumnDef="prioridad">
+              <th mat-header-cell *matHeaderCellDef> Prioridad </th>
+              <td mat-cell *matCellDef="let element"> {{element.prioridad}} </td>
+            </ng-container>
+          
+            <ng-container matColumnDef="procedimiento">
+              <th mat-header-cell *matHeaderCellDef> Procedimiento </th>
+              <td mat-cell *matCellDef="let element"> {{element.procedimiento}} </td>
+            </ng-container>
+          
+            <ng-container matColumnDef="costo_final">
+              <th mat-header-cell *matHeaderCellDef> Costo Final </th>
+              <td mat-cell *matCellDef="let element"> {{element.costo_final}} </td>
+            </ng-container>
+          
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+          </table>
+          
+    </div>
+</div>

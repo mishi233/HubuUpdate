@@ -1,0 +1,29 @@
+image: node:20.17.0
+
+cache:
+  paths:
+    - node_modules/
+
+stages:
+  - build
+  - deploy
+
+build:
+  stage: build
+  script:
+    - rm -rf node_modules package-lock.json
+    - npm install
+    - npx ng build
+  artifacts:
+    paths:
+      - dist/hubu-update  # Usamos dist/hubu-update como la ruta de salida del build
+
+pages:
+  stage: deploy
+  script:
+    - cp -r dist/hubu-update/* public/  # Copia los archivos generados en dist/hubu-update a public/
+  artifacts:
+    paths:
+      - public
+  rules:
+    - if: $CI_COMMIT_REF_NAME == "main"
